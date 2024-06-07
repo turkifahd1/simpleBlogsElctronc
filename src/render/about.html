@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نبذة عن التطبيق</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f3f4f6; 
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+<div id="navbar-container"></div>
+<script>
+
+  fetch('../componet/nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+</script>
+  <div class="flex justify-center items-center h-screen">
+    <div class="container mx-auto py-8">
+      <h1 class="text-4xl font-bold text-center mb-8">نبذة عن التطبيق</h1>
+      <p class="text-lg text-gray-700 mb-8 ml-40">
+        التطبيق هو منصة للأخبار تمكنك من الاطلاع على آخر الأخبار العالمية والمحلية بسهولة. يوفر التطبيق مقالات عن مواضيع متنوعة بما في ذلك السياسة والاقتصاد والرياضة والتكنولوجيا وغيرها.
+      </p>
+      <p class="text-lg text-gray-700 mb-8  ml-40">
+        يتيح التطبيق أيضًا للمستخدمين كتابة مقالات خبرية جديدة ومشاركتها مع المجتمع. بالإضافة إلى ذلك، يمكن للمستخدمين متابعة آخر التحديثات والأخبار عبر القسم المخصص للأخبار اليومية.
+      </p>
+      <p class="text-lg text-gray-700  mb-8 ml-40">
+        يتميز التطبيق بواجهة بسيطة وسهلة الاستخدام، مما يجعل من السهل على المستخدمين تصفح المقالات والأخبار بسرعة وفعالية.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

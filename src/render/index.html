@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f3f4f6; 
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+<div id="navbar-container"></div>
+<script>
+  // تحميل محتوى nav.html داخل العنصر الفارغ
+  fetch('../componet/nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+</script>
+
+<!-- Header Section -->
+<header class="bg-white shadow-md py-12">
+  <div class="container mx-auto text-center">
+    <h1 class="text-5xl font-bold text-gray-800">مرحبا بكم في موقع تركي لاخبار</h1>
+    <p class="text-lg text-gray-600 mt-4">مطور البرامج تركي</p>
+  </div>
+</header>
+  <div class="flex justify-center items-center h-screen">
+    <div class="container mx-auto py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+        <a href="News.html">
+          <div class="flex flex-col justify-center items-center bg-white p-8 rounded-lg shadow-lg">
+            <h1 class="text-4xl font-bold mb-4">أخبار جديدة</h1>
+            <p class="text-lg mb-4">
+              هنا يمكنك العثور على آخر الأخبار الجديدة التي تهمك.
+            </p>
+            <img src="../static/image/OIP.jpeg" alt="صورة توضيحية" class="w-80 h-48 object-cover">
+          </div>
+        </a >
+      <a href="News.html">
+          <div class="flex flex-col justify-center items-center bg-white p-8 rounded-lg shadow-lg">
+            <h1 class="text-4xl font-bold mb-4">أخبار يومية عن أسعار الصرف</h1>
+            <p class="text-lg mb-4">
+              تعرّف على آخر التحديثات حول أسعار الصرف للعملات الأجنبية.
+            </p>
+            <img src="../static/image/download.jpeg" alt="صورة توضيحية" class="w-80 h-48 object-cover">
+          </div>
+      </a>
+      <a href="News.html">
+        </div>
+        <div class="flex justify-center">
+          <h2 class="text-center text-blue-500 hover:underline mt-8">
+            اطلع على الأخبار الأخيرة
+          </h2>
+        </div>
+      </a >
+    </div>
+  </div>
+  
+  <footer class="bg-blue-600 p-4 mt-8">
+    <div class="container mx-auto text-center text-white">
+       تم  عمل الموقع من قبل المبرمج تركي النهدي811
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+  
+
+
+
